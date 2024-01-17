@@ -1,0 +1,23 @@
+  <audio src="/ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3" constrols></audio>
+
+   <h1>{wordResult.word}</h1>
+      {wordResult.map((currentWord, index) => (
+        <div key={index}>
+          <WordDisplay 
+            word={currentWord.word} 
+            phonetic={currentWord.phonetic}
+          />
+        <DictionaryResult 
+          partOfSpeech={currentWord.partOfSpeech}
+          definition={currentWord.definition}
+          example={currentWord.example}/>
+        </div>
+      ))}
+
+
+ for(var currPhonetic of currWord.phonetics) {
+            //console.log(currPhonetic)
+            if(currPhonetic.audio != "") {
+                currWordResult.audio = currPhonetic.audio
+            }
+        }
